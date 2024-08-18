@@ -1,0 +1,78 @@
+.nanbar{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(28, 231, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar{
+    width: 1800%;
+    height: 80px;
+    background-color:rgb(134, 205, 235);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.link{
+    width: 60%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+    text-decoration: none;
+    font-family: bold;
+    color: hsl(0, 89%, 37%);
+    font-size: 30px;
+}
+.doc{
+  
+    background-color: aliceblue;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-size: contain;
+}
+h1{
+    /* color: rgb(19, 47, 71); */
+    color: rgb(35, 3, 240);
+    font-size: 30px;
+
+}
+.abcd{
+    background: rgb(221, 242, 250);
+    height: 100%;
+    width: 100%;
+    width: 100%;
+    height: 100vh;
+    background: url(d.png.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(21, 21, 239);
+}
+.abcd{
+    background: rgb(221, 242, 250);
+    height: 100%;
+    width: 100%;
+    width: 100%;
+    height: 100vh;
+    background: url(d.png.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(21, 21, 239);
+}
+.clr{
+    color: rgb(250, 13, 13);
+    font-style: italic;
+}
