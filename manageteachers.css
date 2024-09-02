@@ -1,3 +1,4 @@
+
 *{
     
     margin:0;
@@ -26,19 +27,19 @@
     width: 60%;
     height: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
 }
 .link a{
     text-decoration: none;
     font-family: bold;
-    color: rgb(243, 239, 239);
+    color: rgb(54, 40, 181);
 }
 a{
     text-decoration: none;
     font-family: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(144, 13, 220);
     font-size: 30px;
 }
 .form1{
@@ -61,7 +62,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(people-driving-cars-city-street.jpg);
+    background: url(l12.jpg.jpg);
     background-size: cover;
 }
 .input1{
