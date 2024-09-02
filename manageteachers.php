@@ -1,12 +1,10 @@
 
 <html>
-<head>
-    
+<head>  
     <link rel="stylesheet" href="manageteachers.css">
     <link rel="stylesheet" href="admin.css">
     <title>LOGIN</title>
 </head>
-
 <body>
     <nav class="nanbar">
         <div class="navbar">
