@@ -1,64 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Login.css">
-    <title>Login</title>
-</head>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="login.css">
+    <title>login page</title>
+
+  </head>
 <body>
-    <nav class="navbar">
-        <h1>Super Market Management Sysytem </h1>
-        <div class="Nav_menus">
-            <!-- <div class="menus">Home</div>
-            <div class="menus">Login</div> -->
-            <a href="index.html"><div class="menus">Home</div></a>
-            <a href="Register.php"><div class="menus">Register</div></a>
-        </div>
-    </nav>
-    <section class="Home_Section">
-            <form class="Logincontainer" action="" method="post">
-                <h1>Login</h1>
-                <input class="Logininput1" type="email" placeholder="Email" name="email">
-                <input class="Logininput1" type="password" placeholder="Password" name="pass">
-                <input class="Logininput2" type="submit" value="Login" name="submit">
-            </form>
-    </section>
+< <nav class="nanbar">
+
+<div class="navbar">
+    <a href="#">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
+    <div class="link">
+        <a href="./index.html">home</a> 
+        <a href="./reg.php">register</a>
+        <a href="./fee.php">feedback</a>
+    </div>
+</div>
+</div>
+
+</nav>
+  <div class="logincontainer">
+    <form class="loginform" action="" method="post">
+    <h2 class="LoginHead">MES COLLEGE MARAMPALLY</h2>
+    <p class="abcd">Login To Access Online Library Management</p>
+      <input class="doc1" type="name" name="email" placeholder="email">
+      <input class="doc1" type="Password" name="Password" placeholder="password">
+      <input class="LoginButton" type="submit" name="submit" value="LOGIN">
+  </form>
+</div>
 </body>
 </html>
 
 <?php
-$conn=mysqli_connect("localhost","root","","supermarket_management_system");
-if(!$conn){
-    echo "DB connection failed";
+$conn = mysqli_connect("localhost", "root", "", "online_library_management_system");
+if (!$conn) {
+    die("Database connection failed:");
+    exit();
 }
-if(isset($_POST['submit'])){
-    $pass=$_POST['pass'];
-    $email=$_POST['email'];
-    $sql="SELECT * FROM `login` WHERE `email`='$email' AND  `password`='$pass'";
-    echo "$sql";
-    $data=mysqli_query($conn,$sql);
-    if($data){
-        $row=mysqli_num_rows($data);
-        if($row > 0){
-            $value=mysqli_fetch_assoc($data);
-            if($value['usertype'] == 0){
-            header('Location: Userdash.html');
-            exit();
-            }
-            else if($value['usertype'] == 1){
-                header('Location: Staffdash.html');
-                exit();
-            }
-            else{
-                header('Location: Admindash.php');
-                exit();
-            }
-        }
-    
-        else{
-            echo "user not found";
-        }
+if (isset($_POST['submit'])) {
+$email=$_POST['email'];
+$pasword=$_POST['Password'];
+$sql="SELECT * FROM `login` WHERE `email`='$email' AND `password`='$pasword'";
+echo "$sql";
+$data=mysqli_query($conn, $sql);
+if($data){
+  if(mysqli_num_rows($data)>0){
+    $value=mysqli_fetch_assoc($data);
+    if($value['user_type'] == 0) {
+    header('Location: studentdashboard.html');
+    echo $value['user_type'];
+    exit();
+  }
+  else if($value['user_type'] == 1){
+    header('Location: teacherdash.html');
+    echo $value['user_type'];
+    exit();
+  }
+  else{
+    header('Location: admin.html');
+    echo $value['user_type'];
+
+    exit();
+  }
+}
+}
+  else
+  {
+    echo "<script>alert('invalid user');</script>";
     }
-}
+  }
+mysqli_close($conn);
 ?>
