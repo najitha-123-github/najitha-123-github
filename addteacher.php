@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Library Management System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="addteacher.css">
 </head>
 <body>
 <nav class="nanbar">
