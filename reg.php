@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +6,24 @@
     <link rel="stylesheet" href="reg.css">
 </head>
 <body>
+<nav class="nanbar">
+
+        <div class="navbar">
+            <a href="#">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
+            <div class="link">
+                <a href="./admin.html">home</a> 
+                <a href="./login.php">login</a>
+                <a href="./fee.php">feedback</a>
+            </div>
+        </div>
+        </div>
+
+    </nav>
+
     <div class="logincontainer">
         <h1 class="LoginHead"><b>MES COLLEGE MARAMPALLY</b></h1>
         <form class="loginform" action="" method="post">
-            <h3 class="abcd"><b>LOGIN TO ACCESS ONLINE LIBRARY MANAGEMENT SYSTEM</b></h3>
+            <h3 class="abcd"><b>REIGISTER ONLINE LIBRARY MANAGEMENT SYSTEM</b></h3>
             <input class="doc1" type="text" name="name" placeholder="Name" required><br>
             <input class="doc1" type="text" name="phonenumber" placeholder="Phone Number" required><br>
             <input class="doc1" type="email" name="email" placeholder="E-mail" required><br>
@@ -34,12 +49,14 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmpassword = $_POST['confirmpassword'];
+    $type=0;
 
     if ($password === $confirmpassword) {
         $sql = "INSERT INTO `users` (`name`, `phonenumber`, `email`, `username`, `password`) VALUES ('$name', '$phonenumber', '$email', '$username', '$password')";
-       echo "$sql";
+      $sql1="INSERT INTO `login`(`email`, `password`, `user_type`) VALUES ('$email','$password','$type')";
         $data = mysqli_query($conn, $sql);
-        if ($data) {
+        $data1= mysqli_query($conn, $sql1);
+        if ($data && $data1) {
             echo "<script>alert('Record added');</script>";
         } else {
             echo "<script>alert('Error');</script>";
@@ -48,7 +65,7 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Passwords do not match');</script>";
     }
 } else {
-    echo "<script>alert('Form not submitted');</script>";
+    // echo "<script>alert('Form not submitted');</script>";
 }
 
 mysqli_close($conn);
