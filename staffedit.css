@@ -1,0 +1,116 @@
+/* manageteachers.css */
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/d.png.jpg);
+    background-size: cover;
+}
+
+/* Navbar styles */
+.nanbar {
+    background-color: #1962ac;
+    color: #d6b9b9;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: #f3ebeb;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #8ec5ef;
+}
+
+/* Main content styles */
+.div2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+   /* background-image: url(assets/e.jpg.jpg);*/
+   /* background-size: cover;*/
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(217, 6, 6, 0.1);
+    color: #eceff0;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styles */
+.div3 {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.inp {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d91717;
+    border-radius: 4px;
+}
+
+button#hero_bt {
+    background-color: #0db5e8;
+    color: #f9f4f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#hero_bt:hover {
+    background-color: #15ee20;
+}
+
+
+/* staffedit.css */
+
+/* Additional styles for staff editing page, if needed */
+
+/input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #1ab908;
+    border-radius: 12px;
+}
+
+table tr:nth-child(even) {
+    background-color: #2297b8;
+}
+
+table tr:hover {
+    background-color: hsl(188, 86%, 54%);
+}
+.naj{
+    font-size: xxx-large;
+    text-shadow: 5px 5px 5px rgb(64, 169, 210);
+}
