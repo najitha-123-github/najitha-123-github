@@ -1,6 +1,7 @@
+
 <html>
     <head>
-        <title>Manage Users</title>
+        <title>Manage users</title>
         <link rel="stylesheet" href="./managestudent.css">
     </head>
     <body>
