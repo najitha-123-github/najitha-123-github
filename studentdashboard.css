@@ -42,8 +42,7 @@ a{
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-size: cover;
-    background: url(g.jpg.jpg);
+    background: url(./assets/l12.jpg.jpg);
 }
 h1{
     color: rgb(19, 47, 71);
