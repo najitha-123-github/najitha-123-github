@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Manage users</title>
@@ -6,13 +5,13 @@
     </head>
     <body>
         <nav class="ViewCandidatesNav">
-            <h1 class="ViewCandidatesNavHeading">View Candidates</h1>
+            <h1 class="ViewCandidatesNavHeading">view students</h1>
             <div class="ViewCandidatesNavContainer">
             <a href="admin.html">Home</a>
             </div>
         </nav>
         <div class="ViewCandidatesBodyContainer">
-            <h1>Candidates</h1>
+            <h1>students</h1>
             <?php
     $conn = mysqli_connect("localhost", "root", "", "online_library_management_system");
     if(!$conn){

@@ -1,5 +1,4 @@
 
-
 <html>
 <head>  
     <link rel="stylesheet" href="manageteachers.css">
@@ -115,4 +114,3 @@ if(isset($_POST['userdel'])){
     }
 }
 ?>
-

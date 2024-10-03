@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <link rel="stylesheet" href="login.css">
@@ -10,23 +9,26 @@
 <nav class="navbar">
 <div class="navbar-title">ONLINE LIBRARY MANAGEMENT SYSTEM</div>
         <ul class="nav-menu">
-            <li><a href="./index.html">Home</a></li>
+            <li class="abcd"><a href="./index.html"><b>Home</b></a></li>
             
-            <li><a href="./fee.php">Feedback</a></li>
+            <li class="abcd"><a href="./fee.php"><b>Feedback</b></a></li>
         </ul>
     </nav>
 <div class="logincontainer">
   <form class="loginform" action="" method="post">
   <div class="login-logo">
-  <img src="./assets/meslogo.png" alt="logo" width="45px" align="left">
-  <h2 align="left" font-size="10px">MES&nbsp;COLLEGE&nbsp;MARAMPALLY</h2>
+  <img src="./assets/meslogo.png" alt="logo" width="55px" align="left">
+  <div class="login-logo-text">
+  <h2 align="left" font-size="2px">MES&nbsp;COLLEGE&nbsp;MARAMPALLY</h2>
+  <h6>Affiliated to mahatma gandhi university, kottayam<br>NAAC reaccredited with A+</h6>
+  </div>
   </div>
   <p class="abcd">Login To Access Online Library Management</p>
     <input class="doc1" type="name" name="email" placeholder="email">
     <input class="doc1" type="Password" name="Password" placeholder="password">
     <input class="LoginButton" type="submit" name="submit" value="LOGIN">
     <div class="signup-link">
-        <p>Don't have an account? <a href="#">Register</a></p>
+        <p>Don't have an account? <a href="./reg.php">Register</a></p>
       </div>
 </form>
 </div>

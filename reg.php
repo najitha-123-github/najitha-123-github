@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,7 @@
         <div class="navbar">
             <a href="#">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
             <div class="link">
-                <a href="./admin.html">home</a> 
+                <a href="./index.html">home</a> 
                 <a href="./login.php">login</a>
                 <a href="./fee.php">feedback</a>
             </div>
