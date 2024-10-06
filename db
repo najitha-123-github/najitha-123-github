@@ -1,9 +1,10 @@
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2024 at 03:35 AM
+-- Generation Time: Oct 06, 2024 at 03:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,10 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `bookings`
+--
+
+CREATE TABLE `bookings` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `book_id` int(11) NOT NULL,
+  `booking_date` datetime DEFAULT current_timestamp(),
+  `duration` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `user_id`, `book_id`, `booking_date`, `duration`) VALUES
+(4, 11, 14, '2024-10-05 01:25:29', '1_week'),
+(5, 11, 12, '2024-10-05 01:42:33', '2_weeks');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `books`
 --
 
 CREATE TABLE `books` (
+  `photo` varchar(200) NOT NULL,
   `book_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `author` varchar(255) NOT NULL,
@@ -39,8 +63,12 @@ CREATE TABLE `books` (
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`book_id`, `title`, `author`, `published_year`, `genre`) VALUES
-(1, 'fsdfshdejfg', 'dhfidfhdy', 2020, 'comedy');
+INSERT INTO `books` (`photo`, `book_id`, `title`, `author`, `published_year`, `genre`) VALUES
+('assets/the wings of fire.jpg', 22, 'The Wings of Fire', 'APJ Abdul Kalam', 2000, 'AutoBiography'),
+('assets/mathilukal.jpg', 23, 'Mathilukal', 'Vaikom Muhammad Basheer', 1965, 'novel'),
+('assets/aad jeevitham.jpg', 24, 'Aad Jeevitham', 'Banyamin', 2008, 'novel'),
+('assets/sil.jpg', 25, 'The Silent Patient', 'Alex Michaelides', 2019, 'psycologycal Thriller'),
+('assets/it.jpg', 26, 'It', 'Stephen King', 1986, 'horror');
 
 -- --------------------------------------------------------
 
@@ -83,22 +111,11 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`email`, `password`, `user_type`) VALUES
 ('ammu@gmail.com', 'asdf', '1'),
 ('admin@gmail.com', 'abcd', '6'),
-('', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `registration`
---
-
-CREATE TABLE `registration` (
-  `name` varchar(25) NOT NULL,
-  `phonenumber` int(12) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `user_id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+('', '', ''),
+('ggfjf@ggfj', 'qwer', '0'),
+('najithanazar786@gmail.com', 'zxcv', '0'),
+('fathima@gmail.com', 'sdfg', '0'),
+('fathima@gmail.com', 'sdfg', '0');
 
 -- --------------------------------------------------------
 
@@ -139,8 +156,24 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`name`, `phonenumber`, `email`, `username`, `password`, `usid`) VALUES
+('cgfjfg', 1234567899, 'ggfjf@ggfj', 'rizwanaaaaaa', 'qwer', 10),
+('najitha', 2147483647, 'najithanazar786@gmail.com', 'najithaa', 'zxcv', 11),
+('bgfhgfgf', 1234567890, 'fathima@gmail.com', 'asdfgef', 'sdfg', 12),
+('bgfhgfgf', 1234567890, 'fathima@gmail.com', 'asdfgef', 'sdfg', 13);
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `bookings`
+--
+ALTER TABLE `bookings`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `books`
@@ -152,12 +185,6 @@ ALTER TABLE `books`
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- Indexes for table `registration`
---
-ALTER TABLE `registration`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -177,22 +204,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `bookings`
+--
+ALTER TABLE `bookings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `user_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `registration`
---
-ALTER TABLE `registration`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `teacher`
@@ -204,7 +231,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `usid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `usid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
