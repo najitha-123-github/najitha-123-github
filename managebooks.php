@@ -83,7 +83,10 @@
                     <form method='POST' style='display:inline;'>
                         <button value='$id' name='userdel' type='submit'>Delete</button>
                     </form>
-                <form method='post' action='staffedit.php'><button value='{$id}' name='staffedit' class='deluser' type='submit'>EDIT</button></form></td>";
+               <form method='post' action='editbooks.php'>
+    <button name='bookedit' value='$id' class='deluser' type='submit'>EDIT</button>
+</form>
+</td>";
                 
                 echo "</tr>";
             }

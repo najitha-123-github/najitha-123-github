@@ -15,11 +15,18 @@
 }
 .abcd{
     font-size: 16px;
+    color: rgb(19, 20, 20);
 }
+.abc{
+    font-size: 12px;
+    color: #0d0e0f;
+}
+
 .LoginForm{
     width: 400px;
     height: 400px;
-    background-color: rgb(241, 188, 188);
+    background-color: rgb(247, 160, 227);
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -111,7 +118,7 @@
 }
 
 .nav-menu a {
-    color: rgb(247, 239, 239);
+    color: rgb(12, 12, 12);
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -173,8 +180,8 @@
   }
   
   .signup-link p {
-    color: #333;
-    font-size: 14px;
+    color: #0b0a0a;
+    font-size: 16px;
   }
   
   .signup-link a {

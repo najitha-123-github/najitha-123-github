@@ -90,11 +90,9 @@ button#hero_bt:hover {
 }
 
 
-/* staffedit.css */
 
-/* Additional styles for staff editing page, if needed */
 
-/input[type="text"],
+input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
