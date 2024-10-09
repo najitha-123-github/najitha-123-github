@@ -5,7 +5,6 @@
     <title>Login Page</title>
 </head>
 <body>
-
 <nav class="navbar">
     <div class="navbar-title">ONLINE LIBRARY MANAGEMENT SYSTEM</div>
     <ul class="nav-menu">
@@ -13,7 +12,6 @@
         <li class="abcd"><a href="./fee.php"><b>Feedback</b></a></li>
     </ul>
 </nav>
-
 <div class="logincontainer">
     <form class="LoginForm" action="" method="post">
         <div class="login-logo">

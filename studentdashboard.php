@@ -52,7 +52,7 @@ mysqli_close($conn);
     <link rel="stylesheet" href="studentdashboard.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
+    <title>STUDENT DASHBOARD</title>
 </head>
 
 <body>
@@ -68,7 +68,7 @@ mysqli_close($conn);
 </nav>
 
 <div class="doc">
-    <h1>Student Dashboard</h1>
+    <h1>STUDENT DASHBOARD</h1>
 </div>
 
 <div class="search-filter">
